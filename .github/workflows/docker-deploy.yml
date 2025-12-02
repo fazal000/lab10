@@ -1,4 +1,4 @@
-name: CI/CD for Node.js App
+  name: CI/CD for Node.js App
 
 on:
   push:
@@ -38,5 +38,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: fazal000/lab10-nodejs-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/lab10-nodejs-app:latest
           # ^^^ change to your real Docker Hub repo name if different
